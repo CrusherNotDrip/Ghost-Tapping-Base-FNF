@@ -4,16 +4,16 @@ import funkin.util.Constants;
 
 class GhostTappingModule extends Module
 {
-	function new()
+	private function new()
 	{
 		super("GhostTapping");
 	}
 
-	override function onStateChangeEnd(event):Void
+	override function onStateChangeEnd(event)
 	{
-		super.onStateChangeEnd(event);
-
 		if (PlayState.instance != null)
 			Constants.GHOST_TAPPING = true;
+
+		super.onStateChangeEnd(event);
 	}
 }
