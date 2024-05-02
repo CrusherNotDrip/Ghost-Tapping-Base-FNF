@@ -9,7 +9,7 @@ class GhostTappingModule extends Module
 		super("GhostTapping");
 	}
 
-	override function onStateChangeEnd(event)
+	override private function onStateChangeEnd(event)
 	{
 		if (PlayState.instance != null)
 			Constants.GHOST_TAPPING = true;
